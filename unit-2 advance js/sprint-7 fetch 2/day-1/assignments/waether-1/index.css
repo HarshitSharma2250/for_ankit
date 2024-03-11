@@ -1,0 +1,102 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding-bottom: 3rem;
+}
+*{
+    font-size: 27px;
+    text-transform: capitalize;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size:34px;
+    text-align: center;
+}
+
+#searchBar {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    align-items: center;
+}
+
+#input {
+    padding: 8px;
+    
+}
+
+button {
+    padding: 7px 30px;
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: large;
+}
+
+#data_display {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 20px;
+    width: 100%;
+ 
+}
+
+
+
+#leftside {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: #fff;
+    
+}
+
+#left_side_container {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: 100%;
+
+}
+
+#gmap_canvas {
+    border: 0;
+    width: 600px;
+    height: 500px;
+}
+
+#Time_data {
+    font-size: 27px;
+    margin-bottom: 10px;
+    font-weight: 550;
+    text-transform: capitalize;
+    color: red;
+}
+
+#left_side_container div {
+    margin-bottom: 10px;
+}
+
+#left_side_container h2 {
+    font-size: 18px;
+}
+
+#left_side_container span {
+    margin-left: 10px;
+}
+
+#left_side_container div span:first-child {
+    font-weight: bold;
+}
+
+#city_Name,#temp_logo{
+   
+    margin-bottom: 25px;
+}

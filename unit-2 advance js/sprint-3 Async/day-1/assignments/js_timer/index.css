@@ -1,0 +1,22 @@
+input{
+    width:50px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 33px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.buttons{
+    margin-top: 2rem;
+}
+#timer{
+    width: 30%;
+    padding: 3rem 0;
+}
+span{
+    font-size: 18px;
+}

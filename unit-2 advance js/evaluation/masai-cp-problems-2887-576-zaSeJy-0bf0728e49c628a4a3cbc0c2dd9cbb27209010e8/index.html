@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Movie App</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+body{
+  padding: 2rem 20px;
+}
+#serach{
+  text-align: center;
+}
+#search-inp{
+  width: 25%;
+  height: 2rem;
+}
+#search-btn{
+  height: 2rem;
+  width: 8%;
+}
+#search-btn:active{
+  background-color: rgb(33, 63, 121);
+  color: #fff;
+}
+#movie_container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap:  2rem 0px;
+  margin-top: 3rem;
+}
+#movie_container>div{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+  width: 22%;
+}
+.title{
+  text-align: center;
+  margin: 15px 0px;
+}
+
+
+      /* Write necessery styles here  */
+    </style>
+  </head>
+  <body>
+    <div id="serach">
+      <input type="text" id="search-inp" placeholder="Search"/>
+      <button id="search-btn">Search</button>
+    </div>
+    <div id="movie_container"></div>
+    <h2 class="error-container"></h2>
+  </body>
+
+  <script>
+    // Write necessery JS here
+    let search_inp=document.getElementById('search-inp')
+    let search_btn=document.getElementById('search-btn')
+    let movie_container=document.getElementById('movie_container')
+    let error_container=document.getElementById('error-container')
+ let ApiKey='a2f9dc94'
+
+search_btn.addEventListener('click',async()=>{
+await FetchMovieData(search_inp.value)
+})
+
+
+async function FetchMovieData(input){
+  try {
+    let res=await fetch(`https://www.omdbapi.com/?apiKey=${ApiKey}&s=${input}`)
+    let data=await res.json()
+    RenderMovieData(data.Search)
+  } catch (error) {
+    error_container.textContent='Movie not found'
+  }
+}
+
+function RenderMovieData(data){
+  movie_container.innerHTML=null
+
+data.forEach(ele => {
+let div=document.createElement('div')
+
+let pic=document.createElement('img')
+pic.className='poster'
+  let title =document.createElement('h2')
+  title.className='title '
+
+  pic.src=ele.Poster;
+  title.textContent=ele.Title
+  div.append(pic,title)
+movie_container.appendChild(div)
+});
+
+}
+
+
+
+
+
+
+
+
+
+
+  </script>
+</html>

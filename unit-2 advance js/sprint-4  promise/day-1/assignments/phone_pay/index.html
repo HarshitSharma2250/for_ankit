@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="body_page">
+        <h1>phone pay</h1>
+
+<section id="phone_pay_system">
+
+<div id="input_data">
+
+    <div id="sendmoney">
+        <i class="fa fa-long-arrow-left"></i>
+        <span>send money</span>
+            </div>
+        
+        <div id="name_upiID">
+        <p>sending money to</p>
+        <div id="name">
+            <p>U N</p>
+            <div id="name_box">
+                <p>unknown name</p>
+                <p>1234567890@paytm</p>
+            </div>
+        </div>
+        </div>
+        
+        <div id="amount">
+        <div id="amount_content">
+            <p>amount</p>
+            <p>min</p>
+        </div>
+        <div id="amount_number">
+            <label for=""> ₹  </label>
+            <input type="number" placeholder="00.00"  min="1" required id="input_number">
+        </div>
+        </div>
+        
+        
+        <div id="account_details">
+            <p>debit account</p>
+            <div id="account_bank">
+            <img src="https://www.freepnglogos.com/uploads/sbi-logo-png/why-sbi-billion-loan-adani-doesn-make-sense-5.png" alt="">
+            <div id="account_details_right">
+                <p>state bank of india</p>
+                <p>XXXXXXX7503</p>
+            </div>
+            </div>
+        </div>
+        
+        <div id="remarks">
+            <div id="remark_content">
+                <p>remarks</p>
+                <p>(optional)</p>
+            </div>
+            <input type="text" >
+        </div>
+        
+        <div id="logo">
+            <img src="https://logodix.com/logo/1763558.jpg" alt="">
+        </div>
+        
+        <button id="first_pay_btn" type="submit">send</button>
+</div>
+   
+<div id="output_data">
+  <p id="logo_spage">
+    <img src="https://logodix.com/logo/1763558.jpg" alt="">
+  </p>
+<div id="content_number">
+    <p>state bank of india</p>
+    <p>XXXX7503</p>
+    <hr>
+</div>
+
+<div id="toSending">
+   <div class="upper_nameBox">
+    <p>To : </p>
+    <p class="font_weight">Unknown user</p>
+   </div> 
+   <div class="lowerbox_money">
+    <p>sending :</p>
+    <p class="font_weight">₹ <span class="amount_sending"></span>.00</p>
+   </div>
+</div>
+
+
+<div id="six_digit_pin">
+<p>enter 6- digit upi pin</p>
+
+<div id="pin_here">
+    <input type="password" id="pin_no_1">
+<input type="password" id="pin_no_2" >
+<input type="password" id="pin_no_3">
+<input type="password" id="pin_no_4">
+<input type="password" id="pin_no_5">
+<input type="password" id="pin_no_6">
+</div>
+</div>
+
+
+<div id="showtext">
+    <p>!</p>
+    <div id="content_showtext">
+        <p>you are sending ₹ <span class="amount_sending font_weight"></span>.00 form your </p>
+        <p>account to <span class="font_weight">unknown user</span></p>
+    </div>
+</div>
+<button id="submit_secondPage">submit</button>
+</div>
+
+
+
+<div id="finalPage">
+    task done
+</div>
+</section>
+
+</div>
+
+
+</body>
+<script src="./index.js"></script>
+</html>

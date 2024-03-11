@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+
+function Fourwheeler(make, model, year, color,tyer,door){
+this.make=make;
+this.model=model;
+this.color=color;
+this.tyer=tyer;
+this.door=door
+this.speed = 0;
+} 
+
+
+Fourwheeler.prototype.milage=function(){
+    console.log('milage of this car is 15Km/hr')
+}
+
+Fourwheeler.prototype.speedincrease=function(speedManual){
+this.speed+=speedManual;
+console.log(`this speed is now ${this.speed}`)
+}
+Fourwheeler.prototype.speedDecrease=function(speedManual){
+    if(this.apeed>speedManual){
+        this.speed-=speedManual;
+    }
+console.log(`this speed is now ${this.speed}`)
+}
+
+let car1=new Fourwheeler('maruti','aulto',2007,'white',4,4)
+console.log(car1)
+car1.speedincrease(100)
+
+
+//Object.create --------------------------------------------------------------
+let automobiledetails={
+
+milage:function(){
+    console.log('its milage is 15KM/hr')
+},
+
+speedincrease:function(speedManual){
+this.speed+=speedManual
+console.log(`it's speed now is ${this.speed}`)
+},
+
+speedDecrease :function(speedManual){
+    if(this.apeed>speedManual){
+        this.speed-=speedManual;
+    }
+}
+}
+
+let objectupdate=Object.create(automobiledetails)
+
+objectupdate.make='maruti';
+objectupdate.model='aulto';
+objectupdate.color='white';
+objectupdate.tyer=4;
+objectupdate.door=4
+objectupdate.speed = 0;
+
+objectupdate.speedincrease(50)
+
+
+</script>
+</html>
